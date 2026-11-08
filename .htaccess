@@ -1,0 +1,11 @@
+# Raiz do projeto (cPanel): serve a pasta public/ como se fosse a raiz do site e bloqueia o resto.
+# URL final: https://seudominio.com.br/agenda_clinica/
+Options -Indexes
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(includes|storage|database)(/|$) - [F,L]
+  RewriteRule ^(config\.php|README\.md)$ - [F,L]
+  RewriteRule ^public/ - [L]
+  RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

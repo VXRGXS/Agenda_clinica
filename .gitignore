@@ -1,0 +1,12 @@
+# Credenciais e configuração do ambiente: NUNCA versionar
+config.php
+
+# Logs gerados pelo sistema (contêm e-mails de pacientes)
+storage/*.log
+
+# Pacotes, editores e sistema operacional
+*.zip
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
